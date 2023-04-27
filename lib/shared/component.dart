@@ -2,11 +2,16 @@
 
 import 'package:flutter/material.dart';
 
+// this file contain 2 shared widgets and we can call them anywhere in our app.
+
 Widget myFormField({
+  // the 3 parameters below will make our widget dynamin so whenever we call this widget .. we must give it a new values.
   required TextEditingController controller,
   required bool isPass,
   required Text label,
 }) =>
+// The idea of making a shared component means that rather than write this code below 2 times or more in a row ... we write it 1 time then call it whenever we need it.
+
     Padding(
       padding: const EdgeInsets.all(10.0),
       child: TextFormField(
@@ -17,11 +22,13 @@ Widget myFormField({
     );
 
 Widget defualtCard({
+  // the 4 parameters below will make our widget dynamin so whenever we call this widget .. we must give it a new values.
   required BuildContext context,
   required Widget whereTo,
   required String image,
   required String text,
 }) =>
+// The idea of making a shared component means that rather than write this code below 5 times in a row ... we write it 1 time then call it 5 times.
     InkWell(
       onTap: () {
         Navigator.push(
